@@ -6,7 +6,6 @@ authors = ["AlexBlandin"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
-# rtoml = "^0.7.1"
 yt-dlp = "^2022.4.8"
 
 [tool.poetry.dev-dependencies]
