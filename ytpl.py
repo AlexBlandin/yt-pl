@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
-from yt_dlp import YoutubeDL
 import sys
+
+from yt_dlp import YoutubeDL
 
 # tree walk to each, if ever they break the current format
 def dur(d):
