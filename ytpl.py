@@ -20,6 +20,7 @@ def ytpl(url):
   
   with YoutubeDL({"dump_single_json": True, "simulate": True, "quiet": True}) as ydl:
     d = ydl.extract_info(url, download = False)
+  assert isinstance(d, dict)
   
   # direct walk to durations in current format
   seconds = sum(v["duration"] for v in d["entries"])
