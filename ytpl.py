@@ -6,7 +6,8 @@ from yt_dlp import YoutubeDL
 # tree walk to each, if ever they break the current format
 def dur(d):
   if isinstance(d, dict):
-    if "duration" in d: yield int(d["duration"])
+    if "duration" in d:
+      yield int(d["duration"])
     for k, v in d.items():
       if isinstance(v, dict) and k != "fragments":
         yield from dur(v)
