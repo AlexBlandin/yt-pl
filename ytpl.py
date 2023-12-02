@@ -3,6 +3,7 @@ import sys
 
 from yt_dlp import YoutubeDL
 
+
 # tree walk to each, if ever they break the current format
 def dur(d):
   if isinstance(d, dict):
@@ -16,16 +17,17 @@ def dur(d):
       if isinstance(v, dict):
         yield from dur(v)
 
+
 def ytpl(url):
   "How long is a Youtube Playlist?"
-  
+
   with YoutubeDL({"dump_single_json": True, "simulate": True, "quiet": True}) as ydl:
-    d = ydl.extract_info(url, download = False)
+    d = ydl.extract_info(url, download=False)
   assert isinstance(d, dict)
-  
+
   # direct walk to durations in current format
   seconds = sum(v["duration"] for v in d["entries"])
-  
+
   print(d["title"])
   print(f"{seconds}s")
   minutes, seconds = seconds // 60, seconds % 60
@@ -40,6 +42,7 @@ def ytpl(url):
         weeks, days = days // 7, days % 7
         print(f"{weeks}w{days}d{hours}h{minutes}m{seconds}s")
   print()
+
 
 if __name__ == "__main__":
   args = sys.argv[1:]
