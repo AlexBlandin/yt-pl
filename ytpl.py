@@ -48,10 +48,8 @@ if __name__ == "__main__":
   args = sys.argv[1:]
   for url in args:
     ytpl(url)
-  else:
+  url = input("Youtube Playlist to check (leave empty to quit): ").strip()
+  while url:
+    ytpl(url)
     url = input("Youtube Playlist to check (leave empty to quit): ").strip()
-    while len(url):
-      ytpl(url)
-      url = input("Youtube Playlist to check (leave empty to quit): ").strip()
-    else:
-      ytpl("https://www.youtube.com/playlist?list=PLJzpzNSXetSPnQ0pr4ZX8DmrLFCNNFP-a")
+  ytpl("https://www.youtube.com/playlist?list=PLJzpzNSXetSPnQ0pr4ZX8DmrLFCNNFP-a")
