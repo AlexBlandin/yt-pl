@@ -19,8 +19,7 @@ def dur(d):
 
 
 def ytpl(url):
-  "How long is a Youtube Playlist?"
-
+  """How long is a Youtube Playlist?"""
   with YoutubeDL({"dump_single_json": True, "simulate": True, "quiet": True}) as ydl:
     d = ydl.extract_info(url, download=False)
   assert isinstance(d, dict)
