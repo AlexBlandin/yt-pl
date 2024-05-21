@@ -33,20 +33,20 @@ def ytpl(url) -> None:  # noqa: ANN001
   # direct walk to durations in current format
   seconds = sum(v["duration"] for v in d["entries"])
 
-  print(d["title"])
-  print(f"{seconds}s")
+  print(d["title"])  # noqa: T201
+  print(f"{seconds}s")  # noqa: T201
   minutes, seconds = seconds // 60, seconds % 60
-  print(f"{minutes}m{seconds}s")
+  print(f"{minutes}m{seconds}s")  # noqa: T201
   if minutes >= 60:  # noqa: PLR2004
     hours, minutes = minutes // 60, minutes % 60
-    print(f"{hours}h{minutes}m{seconds}s")
+    print(f"{hours}h{minutes}m{seconds}s")  # noqa: T201
     if hours >= 24:  # noqa: PLR2004
       days, hours = hours // 24, hours % 24
-      print(f"{days}d{hours}h{minutes}m{seconds}s")
+      print(f"{days}d{hours}h{minutes}m{seconds}s")  # noqa: T201
       if days >= 7:  # noqa: PLR2004
         weeks, days = days // 7, days % 7
-        print(f"{weeks}w{days}d{hours}h{minutes}m{seconds}s")
-  print()
+        print(f"{weeks}w{days}d{hours}h{minutes}m{seconds}s")  # noqa: T201
+  print()  # noqa: T201
 
 
 if __name__ == "__main__":

@@ -23,3 +23,4 @@ urllib3==2.2.1
 websockets==12.0
     # via yt-dlp
 yt-dlp==2024.4.9
+    # via yt-pl (pyproject.toml)
