@@ -3,10 +3,10 @@ name = "yt-pl"
 description = "Youtube Playlist Length"
 version = "1.0.0"
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.11"
 license = "MIT"
 authors = [{ name = "AlexBlandin" }]
-dependencies = ["yt-dlp[default]>=2024.10.22"]
+dependencies = ["yt-dlp[default]>=2025.3.31"]
 
 [project.optional-dependencies]
 dev = ["ruff", "pdbp", "basedmypy", "basedpyright"]
@@ -18,7 +18,7 @@ Source = "https://github.com/alexblandin/yt-pl"
 
 [tool.ruff]
 indent-width = 2
-target-version = "py310"
+target-version = "py311"
 line-length = 120
 
 [tool.ruff.lint]
