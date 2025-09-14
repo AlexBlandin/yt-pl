@@ -1,4 +1,11 @@
-#!/usr/bin/env python3
+#!/usr/bin/env -S uv run -qqs
+# /// script
+# requires-python = ">=3.11"
+# dependencies = [
+#   "yt-dlp[default,curl-cffi]>=2025.09.05",
+# ]
+# ///
+#
 """
 How long is a Youtube Playlist?
 

@@ -6,10 +6,10 @@ readme = "README.md"
 requires-python = ">=3.11"
 license = "MIT"
 authors = [{ name = "AlexBlandin" }]
-dependencies = ["yt-dlp[default]>=2025.6.9"]
+dependencies = ["yt-dlp[default,curl-cffi]>=2025.09.05",]
 
 [project.optional-dependencies]
-dev = ["ruff", "pdbp", "basedmypy", "basedpyright"]
+dev = ["ruff"]
 
 [project.urls]
 Documentation = "https://github.com/alexblandin/yt-pl#readme"
